@@ -23,7 +23,7 @@ namespace GeekShopping.Web.Services
 
         public async Task<ProductModel> FindById(long id)
         {
-            var response = await _httpClient.GetAsync($"{BasePath}/products/{id}");
+            var response = await _httpClient.GetAsync($"{BasePath}/{id}");
             return await response.ReadContentAs<ProductModel>();
         }
 

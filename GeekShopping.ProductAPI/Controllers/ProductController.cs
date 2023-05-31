@@ -37,7 +37,7 @@ namespace GeekShopping.ProductAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(ProductVO vo)
+        public async Task<IActionResult> Save([FromBody] ProductVO vo)
         {
             if (vo == null)
                 return BadRequest();
@@ -47,7 +47,7 @@ namespace GeekShopping.ProductAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(ProductVO vo)
+        public async Task<IActionResult> Update([FromBody] ProductVO vo)
         {
             if (vo == null)
                 return BadRequest();
