@@ -48,7 +48,7 @@ namespace GeekShopping.Web.Services
         }
         public async Task<bool> Delete(long id)
         {
-            var response = await _httpClient.DeleteAsync($"{BasePath}/products/{id}");
+            var response = await _httpClient.DeleteAsync($"{BasePath}/{id}");
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<bool>();
             else
